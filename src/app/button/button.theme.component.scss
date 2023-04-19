@@ -1,0 +1,60 @@
+@mixin theme-button($colors) {
+  $primary: map-get(
+    $map: $colors,
+    $key: primary,
+  );
+  $accent: map-get(
+    $map: $colors,
+    $key: accent,
+  );
+
+  .flat {
+    color: #fff;
+    border: 0px;
+
+    &.primary {
+      background-color: $primary;
+    }
+
+    &.accent {
+      background-color: $accent;
+    }
+
+    &.button-disabled {
+      background-color: grey;
+    }
+  }
+
+  .basic {
+    color: black;
+    border: 0px;
+
+    &.primary {
+      color: $primary;
+    }
+
+    &.accent {
+      color: $accent;
+    }
+
+    &.button-disabled {
+      color: grey;
+    }
+  }
+
+  .stroked {
+    border: 1px solid gainsboro;
+
+    &.primary {
+      color: $primary;
+    }
+
+    &.accent {
+      color: $accent;
+    }
+
+    &.button-disabled {
+      color: grey;
+    }
+  }
+}

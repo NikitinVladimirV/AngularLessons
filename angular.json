@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         },
         "@schematics/angular:application": {
           "strict": true
@@ -31,7 +32,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/normalize.css/normalize.css"
             ],
             "scripts": []
           },
@@ -102,6 +104,14 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/eshop",
+            "netlifyToken": "3643bca927eb84c7ff074f19a543a90e49ee207c3abbff0a44ed376356a81f79",
+            "siteId": "4bd126d3-be9b-4488-8d42-4f28e6136ab4"
           }
         }
       }

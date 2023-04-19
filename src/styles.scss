@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+// Подключаем стили кнопок
+@import "./app/button/button.theme.component.scss";
+// подключаем цвета
+@import "./app/theme/color.scss";
+// включаем миксин из файла со стилями кнопок
+@include theme-button($app-colors);
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}

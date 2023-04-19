@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card__inner">
+    <app-bage class="card__bage" [bage]="product.bage!"></app-bage>
+    <figure class="card__gallery">
+      <img alt="" class="card__gallery-image" [src]="image">
+    </figure>
+    <div class="card__color-options">
+      <app-color-option [color]="product.colors.one.color" (click)="changeImage(product.colors.one.image!)"></app-color-option>
+      <app-color-option [color]="product.colors.two.color" (click)="changeImage(product.colors.two.image!)"></app-color-option>
+    </div>
+    <div class="card__company">{{product.company}}</div>
+    <div class="card__title">{{product.title}}</div>
+
+    <div class="card__rates">
+      <app-rates [rating]="product.rating?.value"></app-rates>
+      <span class="card__reviews">{{product.rating?.reviews}} отзыва</span>
+    </div>
+    <app-price [price]="product.price"></app-price>
+
+    <div class="card__actions">
+      <app-button-icon [active]="isFavorite" (click)="toggleFavorite()"></app-button-icon>
+      <app-button></app-button>
+    </div>
+    <app-delivery-options [options]="product.deliveryOptions"></app-delivery-options>
+  </div>
+</div>
