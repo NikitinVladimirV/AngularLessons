@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: HomepageComponent,
   },
+  {
+    path: 'counter',
+    component: HomepageComponent,
+  },
 ];
 
 @NgModule({

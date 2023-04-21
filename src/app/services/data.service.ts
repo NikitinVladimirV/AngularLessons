@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HomepageComponent } from '../homepage/homepage.component';
 
 @Injectable({
-  providedIn: HomepageComponent,
+  providedIn: 'any',
 })
 export class DataService {
   public count = 0;

@@ -1,34 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-homepage',
   template: `
     <div class="homepage">
-      <!-- <app-counter
-        [value]="count"
-        (valueDecrease)="decrease()"
-        (valueIncrease)="increase()"
+      <app-counter
+        [value]="service.count"
+        (valueDecrease)="service.decrease()"
+        (valueIncrease)="service.increase()"
       >
-      </app-counter> -->
-      <!-- <app-counter></app-counter> -->
-      1111
-
-      <app-button></app-button>
+      </app-counter>
     </div>
   `,
   styles: [],
 })
 export class HomepageComponent implements OnInit {
-  public count = 0;
-
-  decrease() {
-    this.count > 0 ? this.count-- : 0;
-  }
-
-  increase() {
-    this.count++;
-  }
-  constructor() {}
+  constructor(public service: DataService) {}
 
   ngOnInit(): void {}
 }

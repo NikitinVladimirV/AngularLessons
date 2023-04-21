@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CounterModule } from '../counter/counter.module';
 import { HomepageComponent } from './homepage.component';
-import { ButtonModule } from '../button/button.module';
+import { DataService } from '../services/data.service';
 
 @NgModule({
   declarations: [HomepageComponent],
-  imports: [CommonModule, ButtonModule],
+  imports: [CommonModule, CounterModule],
   exports: [HomepageComponent],
+  // providers: [DataService],
 })
 export class HomepageModule {}

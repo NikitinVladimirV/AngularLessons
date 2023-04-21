@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from './button/button.module';
 import { CardModule } from './card/card.module';
 import { TopBarModule } from './top-bar/top-bar.module';
+import { HomepageModule } from './homepage/homepage.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { TopBarModule } from './top-bar/top-bar.module';
     ButtonModule,
     CardModule,
     TopBarModule,
+    HomepageModule,
   ],
   bootstrap: [AppComponent],
 })
