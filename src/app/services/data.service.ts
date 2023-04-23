@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
+import { HomepageModule } from '../homepage/homepage.module';
+import { CounterModule } from '../counter/counter.module';
 
 @Injectable({
-  providedIn: 'any',
+  // providedIn: 'root',
+  // providedIn: 'any',
+  providedIn: HomepageModule,
 })
 export class DataService {
   public count = 0;
